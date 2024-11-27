@@ -12,7 +12,7 @@ class Form1(Form1Template):
   def outlined_button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
     print(self.text_box_1.text)
-    resul = alert(PopUpForm)
+    alert(PopupForm(), title="My Pop-Up", large=True)
     pass
 
   def outlined_button_1_show(self, **event_args):
