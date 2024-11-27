@@ -10,9 +10,10 @@ class Form1(Form1Template):
     # Any code you write here will run before the form opens.
 
   def outlined_button_1_click(self, **event_args):
-    """This method is called when the button is clicked"""
-    print(self.text_box_1.text)
-    alert(PopupForm(), title="My Pop-Up", large=True)
+    popup = PopupForm()
+    result = alert(popup, title="My Pop-Up", large=True)
+    if result:
+      print(popup.text_box_1.text)
     pass
 
   def outlined_button_1_show(self, **event_args):
